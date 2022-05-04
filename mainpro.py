@@ -3,12 +3,12 @@ print("\n1.Administrator")
 print("2.Student")
 pu=input("\nEnter your choise(1/2):")
 if pu=='1':
-    pswd=input("\nEnter the password: ")
-    if pswd=='admin':
+    pswd=input("\nEnter the password: ")     #Enter your MySQL DATABASE password.
+    if pswd=='admin':                        #Update here as your MySQL DATABASE password form 'admin'.
         def add_stu():
             print("!__________!Enter details!____________!")
             import mysql.connector
-            dbms=mysql.connector.connect(host='localhost',user='root',password="{}".format(pswd),database='rty')
+            dbms=mysql.connector.connect(host='localhost',user='root',password="{}".format(pswd),database='rty')  #You have to already create your Database & Table like 'rty' & 'student' respectively.
             ro=int(input("Enter the Roll no.:"))
             na=input("Enter the Name:")
             fa=input("Enter the Father's Name:")
